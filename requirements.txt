@@ -1,0 +1,2 @@
+requests>=2.31
+zstandard>=0.22 ; platform_python_implementation != "PyPy"

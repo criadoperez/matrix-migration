@@ -1,0 +1,107 @@
+{
+  "!JYJduUCWWoqOwiXAMN:supermigration.com": [
+    {
+      "age": 28399,
+      "content": {
+        "creator": "@migrationtest:supermigration.com",
+        "room_version": "10"
+      },
+      "event_id": "$TYi4cZxTV1duG9ja6SGToS8Wl2h2IBlhrbLPCTV-JOA",
+      "origin_server_ts": 1756291269552,
+      "room_id": "!JYJduUCWWoqOwiXAMN:supermigration.com",
+      "sender": "@migrationtest:supermigration.com",
+      "state_key": "",
+      "type": "m.room.create",
+      "unsigned": {
+        "age": 28399
+      },
+      "user_id": "@migrationtest:supermigration.com"
+    },
+    {
+      "age": 28215,
+      "content": {
+        "history_visibility": "shared"
+      },
+      "event_id": "$42N1j2VNOBiunwubpu_oQl5KHP9vo_B4rp2POJThzJw",
+      "origin_server_ts": 1756291269736,
+      "room_id": "!JYJduUCWWoqOwiXAMN:supermigration.com",
+      "sender": "@migrationtest:supermigration.com",
+      "state_key": "",
+      "type": "m.room.history_visibility",
+      "unsigned": {
+        "age": 28215
+      },
+      "user_id": "@migrationtest:supermigration.com"
+    },
+    {
+      "age": 28215,
+      "content": {
+        "join_rule": "public"
+      },
+      "event_id": "$s7MZXG7wfnOQtMdap-9SygstmWrBYTG4h6EvYYt2wF0",
+      "origin_server_ts": 1756291269736,
+      "room_id": "!JYJduUCWWoqOwiXAMN:supermigration.com",
+      "sender": "@migrationtest:supermigration.com",
+      "state_key": "",
+      "type": "m.room.join_rules",
+      "unsigned": {
+        "age": 28215
+      },
+      "user_id": "@migrationtest:supermigration.com"
+    },
+    {
+      "age": 28215,
+      "content": {
+        "name": "Test Migration Room"
+      },
+      "event_id": "$3FJwcsnVlZt6NzPSa2Jjk1NkSqPeBphEtNSK48VyhvE",
+      "origin_server_ts": 1756291269736,
+      "room_id": "!JYJduUCWWoqOwiXAMN:supermigration.com",
+      "sender": "@migrationtest:supermigration.com",
+      "state_key": "",
+      "type": "m.room.name",
+      "unsigned": {
+        "age": 28215
+      },
+      "user_id": "@migrationtest:supermigration.com"
+    },
+    {
+      "age": 28221,
+      "content": {
+        "ban": 50,
+        "events": {
+          "m.room.avatar": 50,
+          "m.room.canonical_alias": 50,
+          "m.room.encryption": 100,
+          "m.room.history_visibility": 100,
+          "m.room.name": 50,
+          "m.room.power_levels": 100,
+          "m.room.server_acl": 100,
+          "m.room.tombstone": 100
+        },
+        "events_default": 0,
+        "historical": 100,
+        "invite": 50,
+        "kick": 50,
+        "m.call.invite": 50,
+        "redact": 50,
+        "state_default": 50,
+        "users": {
+          "@migrationtest:supermigration.com": 100
+        },
+        "users_default": 0
+      },
+      "event_id": "$CCxun8V-DqcbgQ_Ao4Bk3IBGcYsbo9aMHoW0o1kL1ZI",
+      "origin_server_ts": 1756291269730,
+      "room_id": "!JYJduUCWWoqOwiXAMN:supermigration.com",
+      "sender": "@migrationtest:supermigration.com",
+      "state_key": "",
+      "type": "m.room.power_levels",
+      "unsigned": {
+        "age": 28221
+      },
+      "user_id": "@migrationtest:supermigration.com"
+    }
+  ],
+  "!bleCgiCobFeHKDyBMb:supermigration.com": []
+}

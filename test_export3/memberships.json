@@ -1,0 +1,8 @@
+{
+  "!JYJduUCWWoqOwiXAMN:supermigration.com": {
+    "@migrationtest:supermigration.com": "join"
+  },
+  "!bleCgiCobFeHKDyBMb:supermigration.com": {
+    "_error": "HTTP 403: {'errcode': 'M_FORBIDDEN', 'error': 'User @migrationtest:supermigration.com not in room !bleCgiCobFeHKDyBMb:supermigration.com, and room previews are disabled'}"
+  }
+}

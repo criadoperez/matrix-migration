@@ -1,0 +1,26 @@
+[
+  {
+    "canonical_alias": null,
+    "creator": "@alice1:supermigration.com",
+    "federatable": false,
+    "guest_access": "can_join",
+    "history_visibility": "shared",
+    "join_rules": "invite",
+    "name": "Mock Room",
+    "public": false,
+    "room_id": "!bleCgiCobFeHKDyBMb:supermigration.com",
+    "version": "10"
+  },
+  {
+    "canonical_alias": null,
+    "creator": "@migrationtest:supermigration.com",
+    "federatable": false,
+    "guest_access": null,
+    "history_visibility": "shared",
+    "join_rules": "public",
+    "name": "Test Migration Room",
+    "public": false,
+    "room_id": "!JYJduUCWWoqOwiXAMN:supermigration.com",
+    "version": "10"
+  }
+]
