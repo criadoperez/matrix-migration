@@ -1,6 +1,15 @@
 # Matrix Migration Project: Synapse → Tuwunel
 
+⚠️ **WORK IN PROGRESS** - This toolkit is under active development and requires thorough testing before production use.
+
 This project delivers a toolkit to migrate a Matrix homeserver from **Synapse** to **Tuwunel** (RocksDB-backed), with minimal downtime and without directly touching Tuwunel's internal storage. The migration works via **export → bundle → import → cutover**.
+
+## Documentation
+
+- **[Architecture](architecture.md)** - System design and technical details
+- **[Operations Runbook](operations-runbook.md)** - Step-by-step migration procedures
+- **[Migration Limitations](limitations.md)** - What can and cannot be migrated
+- **[Migration Comparison](comparison.md)** - How this differs from conduwuit→Tuwunel migration
 
 ## Project Steps
 
@@ -80,20 +89,31 @@ For the MVP, cutover is handled manually via a short operator runbook:
 - **Verify:** Test federation, media upload, DMs, encrypted room messages.
 - **Rollback:** If verification fails, point traffic back to Synapse.
 
-### 4. Documentation
-- **Architecture.md**: explains system design, bundle schema, migration flows.
-- **Operations-runbook.md**: step-by-step operator instructions for cutover and rollback.
-- **E2EE-user-guide.md**: explains to end-users how to log in again, verify devices, and handle encrypted history.
+### 4. Documentation & Testing
+- Comprehensive documentation covers system architecture, operational procedures, and user impact
+- **Production deployment requires thorough testing** - validate with your specific environment first
+- Consider running test migrations on smaller instances before production cutover
 
 ## Current Status
-- Exporter available at `exporter/exporter.py`.
-- Importer available at `importer/importer.py`.
-- Runbook drafting in progress.
 
-## Limitations
-- **E2EE keys** cannot be migrated; users must re-login and re-establish cross-signing.
-- **Per-user account_data** (push rules, tags) not included (not available via Synapse admin API).
-- **Room history** backfill is partial; relies on federation and remote servers.
+### ✅ Implemented & Tested
+- **Exporter** (`exporter/exporter.py`) - Production-ready Synapse data extraction
+- **Importer** (`importer/importer.py`) - Federation-based Tuwunel hydration
+- **Bundle format** - Neutral, compressed export format with integrity checks
+- **Runbook** - Manual cutover procedures documented
+
+### 🚧 Testing Required
+- **End-to-end migration flows** - Needs validation with real Synapse→Tuwunel deployments
+- **Federation edge cases** - Various server configurations and network conditions
+- **Large dataset handling** - Performance with homeservers containing thousands of rooms/users
+- **Rollback procedures** - Verification of recovery processes
+
+### ⚠️ Known Limitations
+See **[limitations.md](limitations.md)** for comprehensive details:
+- **E2EE keys** cannot be migrated - users must re-login and re-verify devices
+- **Message history** is partially preserved - older history may be lost
+- **Account data** (push rules, tags) not included - not accessible via admin APIs
+- **Media files** require manual handling or federation refetch
 
 ## License
 GPLv3
